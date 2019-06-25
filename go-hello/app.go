@@ -7,7 +7,6 @@ import (
 
 func init() {
 	http.HandleFunc("/", getWords)
-	http.HandleFunc("/test", showPata)
 }
 
 func getWords(w http.ResponseWriter, r *http.Request) {
@@ -22,9 +21,4 @@ func getWords(w http.ResponseWriter, r *http.Request) {
     fmt.Fprintf(w, "</form>")
 }
 
-func showPata(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-
-	fmt.Fprintf(w, "<p>ぱたとくかしーー</p>")
-}
 
