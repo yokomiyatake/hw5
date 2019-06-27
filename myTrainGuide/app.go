@@ -13,19 +13,7 @@ import (
 
 func init() {
 	http.HandleFunc("/", main)
-	http.HandleFunc("/norikae", handleTransit)
-
 }
-
-/*
-type Line struct {
-	Name string
-	Stations []string
-}
-
-type TransitNetwork []Line
-*/
-
 
 func readHtmlFile(fileName string) string{
 	fp, err := os.Open(fileName)
@@ -48,4 +36,5 @@ func main(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 
 	fmt.Fprintf(w, readHtmlFile("myTrainGuide.html"))
+	//fmt.Fprintf(w, "hello, world!")
 }
