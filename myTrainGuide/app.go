@@ -5,10 +5,6 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-
-	"google.golang.org/appengine"
-	"google.golang.org/appengine/log"
-	"google.golang.org/appengine/urlfetch"
 )
 
 func init() {
